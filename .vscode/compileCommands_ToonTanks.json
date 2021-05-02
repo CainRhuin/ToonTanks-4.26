@@ -1,0 +1,27 @@
+[
+	{
+		"file": "D:\\\\Unreal Projects\\\\ToonTanksProjectSetup_4.25\\\\ToonTanksProjectSetup_4.25\\\\ToonTanks 4.26\\\\Source\\\\ToonTanks\\\\Pawns\\\\PawnBase.cpp",
+		"command": "cl.exe @\"D:\\Unreal Projects\\ToonTanksProjectSetup_4.25\\ToonTanksProjectSetup_4.25\\ToonTanks 4.26\\.vscode\\compileCommands_ToonTanks\\ToonTanks.190.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\Unreal Projects\\\\ToonTanksProjectSetup_4.25\\\\ToonTanksProjectSetup_4.25\\\\ToonTanks 4.26\\\\Source\\\\ToonTanks\\\\Pawns\\\\PawnBase.h",
+		"command": "cl.exe @\"D:\\Unreal Projects\\ToonTanksProjectSetup_4.25\\ToonTanksProjectSetup_4.25\\ToonTanks 4.26\\.vscode\\compileCommands_ToonTanks\\ToonTanks.190.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\Unreal Projects\\\\ToonTanksProjectSetup_4.25\\\\ToonTanksProjectSetup_4.25\\\\ToonTanks 4.26\\\\Source\\\\ToonTanks\\\\ToonTanks.Build.cs",
+		"command": "cl.exe @\"D:\\Unreal Projects\\ToonTanksProjectSetup_4.25\\ToonTanksProjectSetup_4.25\\ToonTanks 4.26\\.vscode\\compileCommands_ToonTanks\\ToonTanks.190.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\Unreal Projects\\\\ToonTanksProjectSetup_4.25\\\\ToonTanksProjectSetup_4.25\\\\ToonTanks 4.26\\\\Source\\\\ToonTanks\\\\ToonTanks.cpp",
+		"command": "cl.exe @\"D:\\Unreal Projects\\ToonTanksProjectSetup_4.25\\ToonTanksProjectSetup_4.25\\ToonTanks 4.26\\.vscode\\compileCommands_ToonTanks\\ToonTanks.190.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_4.26\\Engine\\Source"
+	},
+	{
+		"file": "D:\\\\Unreal Projects\\\\ToonTanksProjectSetup_4.25\\\\ToonTanksProjectSetup_4.25\\\\ToonTanks 4.26\\\\Source\\\\ToonTanks\\\\ToonTanks.h",
+		"command": "cl.exe @\"D:\\Unreal Projects\\ToonTanksProjectSetup_4.25\\ToonTanksProjectSetup_4.25\\ToonTanks 4.26\\.vscode\\compileCommands_ToonTanks\\ToonTanks.190.rsp\"",
+		"directory": "D:\\Program Files\\Epic Games\\UE_4.26\\Engine\\Source"
+	}
+]
