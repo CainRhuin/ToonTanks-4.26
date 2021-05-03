@@ -32,7 +32,7 @@ void APawnTurret::HandleDestruction()
 void APawnTurret::CheckFireCondition()
 {
 	// If player is valid || is dead then bail
-	if (!PlayerPawn) return;
+	if (!PlayerPawn || !PlayerPawn->GetIsPlayerAlive()) return;
 	// if player is in range then fire
 	if (ReturnDistanceToPlayer() <= FireRange)
 	{
