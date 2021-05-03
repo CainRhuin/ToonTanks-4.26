@@ -4,6 +4,8 @@
 #include "ProjectileBase.h"
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/ProjectileMovementComponent.h"
+#include "Kismet/GameplayStatics.h"
+
 
 // Sets default values
 AProjectileBase::AProjectileBase()
@@ -12,6 +14,7 @@ AProjectileBase::AProjectileBase()
 	PrimaryActorTick.bCanEverTick = false;
 
 	ProjectileMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Projectile Mesh"));
+	ProjectileMesh->OnComponentHit.AddDynamic(this, &AProjectileBase::OnHit); // place in begin play if doesnt work
 	RootComponent = ProjectileMesh;
 
 	ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("Projectile Movement"));
@@ -27,4 +30,17 @@ void AProjectileBase::BeginPlay()
 	
 }
 
+void AProjectileBase::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpule, const FHitResult& Hit)
+{
+	AActor* MyOwner = GetOwner();
+	if (!MyOwner) return;
+
+	if (OtherActor && OtherActor != this && OtherActor != MyOwner)
+	{
+		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwner->GetInstigatorController(), this, DamageType);
+	}
+	// play a bunch of effects here during the polish phase. - TODO
+
+	Destroy();
+}
 
