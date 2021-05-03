@@ -8,6 +8,7 @@
 
 class UProjectileMovementComponent;
 class UParticleSystem;
+class UMatineeCameraShake;
 
 UCLASS()
 class TOONTANKS_API AProjectileBase : public AActor
@@ -28,6 +29,9 @@ private:
 	// Variables
 	UPROPERTY(EditDefaultsOnly, Category = "Damage")
 	TSubclassOf<UDamageType> DamageType;
+
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	TSubclassOf<UMatineeCameraShake> HitShake;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float MovementSpeed = 1300.f;

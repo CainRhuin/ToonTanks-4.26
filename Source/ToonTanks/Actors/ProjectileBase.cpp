@@ -45,6 +45,7 @@ void AProjectileBase::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActo
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwner->GetInstigatorController(), this, DamageType);
 		UGameplayStatics::SpawnEmitterAtLocation(this, HitParticle, GetActorLocation());
 		UGameplayStatics::PlaySoundAtLocation(this, HitSound, GetActorLocation());
+		GetWorld()->GetFirstPlayerController()->ClientStartCameraShake(HitShake);
 		Destroy();
 	}
 	// play a bunch of effects here during the polish phase. - TODO
