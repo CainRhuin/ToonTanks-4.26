@@ -36,6 +36,10 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Health")
 	UHealthComponent* HealthComponent;
 
+	UPROPERTY(EditAnywhere, Category = "Effects")
+	USoundBase* DeathSound;
+
+
 public:
 	// Sets default values for this pawn's properties
 	APawnBase();

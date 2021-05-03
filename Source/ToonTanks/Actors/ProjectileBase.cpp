@@ -32,6 +32,7 @@ void AProjectileBase::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	UGameplayStatics::PlaySoundAtLocation(this, LaunchSound, GetActorLocation());
 }
 
 void AProjectileBase::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpule, const FHitResult& Hit)
@@ -43,6 +44,7 @@ void AProjectileBase::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActo
 	{
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwner->GetInstigatorController(), this, DamageType);
 		UGameplayStatics::SpawnEmitterAtLocation(this, HitParticle, GetActorLocation());
+		UGameplayStatics::PlaySoundAtLocation(this, HitSound, GetActorLocation());
 		Destroy();
 	}
 	// play a bunch of effects here during the polish phase. - TODO
